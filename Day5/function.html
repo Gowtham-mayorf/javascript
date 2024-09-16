@@ -1,0 +1,65 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <script>
+        function myfun(){
+            console.log("hello");
+        }
+        myfun();
+
+        //with parameter
+
+        function myfun1(name){
+            console.log("hello"+name);
+        }
+        myfun1("sachin");
+
+        //with return type
+
+        function myfun2(name){
+            return "hello"+name;
+        }
+
+        console.log(myfun2("sachin"));
+
+//anonymous function
+        let a = function(){
+            console.log("anonymous function");
+        }
+        a();
+        
+        //arrow function - single expression
+        let b = () =>   console.log("arrow function");
+        
+        b();
+
+        //arrow function - multiple expression
+        let c = () => {
+            console.log("arrow function");
+            console.log("arrow 2");
+        }
+        c();
+        //with parameter
+
+        let d = (name) => {
+            console.log("hello"+name);
+        }
+        d("sachin");
+        let e = (x , y) => {
+            console.log(x+y);
+        }
+        e(10,20);
+ // without parameter
+        let f = () => {
+            console.log("hello");
+        }
+        f();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

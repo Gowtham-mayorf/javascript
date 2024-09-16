@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout Event Example</title>
+    <style>
+        .hover-area {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px; /* Vertically center text */
+            font-size: 20px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-area" id="hoverDiv">Hover over me!</div>
+
+    <script>
+        // Get the div element
+        const hoverDiv = document.getElementById('hoverDiv');
+
+        // Add an event listener for the 'mouseout' event
+        hoverDiv.addEventListener('mouseout', function() {
+            // Change the background color when mouse leaves
+            this.style.backgroundColor = 'red';
+        });
+
+        // Optional: Reset the background color when mouse enters
+        hoverDiv.addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'green';
+        });
+    </script>
+</body>
+</html>

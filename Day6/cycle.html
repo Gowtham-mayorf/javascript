@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tyre1,
+        .tyre2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            animation: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .body1 {
+            height: 100px;
+    width: 294px;
+    border: 11px solid yellow;
+    border-top-left-radius: 200px;
+    margin-top: 73px;
+    margin-left: 103px;
+    position: absolute;
+    z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tyre1" style="position: absolute;
+         left: 376px;
+  top: 153px;">
+            <hr style="width: 100px; position: absolute; top: 40px ;">
+        </div>
+        <div class="body1">
+            <hr style="
+       width: 100px;
+    position: absolute;
+    top: -65px;
+    border: 11px solid yellow;
+    border-left: none;
+    border-bottom: none;
+    left: 194px;
+    z-index: -1;
+    height: 140px;">
+        </div>
+        <div class="tyre2" style="position: absolute;
+    top: 153px;
+    left: 62px;">
+            <hr style="width: 100px; position: relative; top: 40px ;">
+        </div>
+
+    </div>
+</body>
+
+</html>

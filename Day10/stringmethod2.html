@@ -1,0 +1,41 @@
+<html>
+<body>
+<script>
+function dw(x)
+{
+	document.write(x);
+	document.write("<br>");
+}
+
+var str = "Welcome to  edextech Solutions to Learn Web Technologies";
+
+dw(str.charAt(5));
+
+str = str.concat(" and Trends");
+dw("After Concat :"+str);
+
+dw("indexOf(to) :"+str.indexOf("to"));
+
+dw("last Index(s) : "+str.lastIndexOf("to"));
+
+dw("Length : "+str.length);
+
+dw("Slice [2-12] :"+str.slice(2,12));
+
+x = str.split(" ");
+dw("<br>After Split(' ') <br>");
+for (i=0; i<x.length; i++)
+dw("x["+i+"] = "+x[i]);
+
+dw("UpperCase :"+str.toUpperCase());
+
+dw("LowerCase :"+str.toLowerCase());
+
+dw(str.replace("e","@"));
+
+var g = "naruto it  a                                       chi    ";
+dw(g.trim());
+
+</script>
+</body>
+</html>

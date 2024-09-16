@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+		function myfun()
+		{
+			var a = parseInt(document.getElementById("t1").value);
+            //15
+			 i=2;
+			
+			while(i<=a) 	
+			{
+                document.write(i+"<br>");
+				//var x = i+"<br>";  
+				// document.getElementById("t3").innerHTML += x;
+				i++;
+			}
+					
+		}
+	</script>
+</head>
+<body>
+    <h3> Number from 1 to Given Number</h3>
+	<input type=text id=t1> 
+<br>
+	<div id =t3> </div>
+	<input type=button Value="Add"
+	onclick=myfun()>
+	
+</body>
+</html>

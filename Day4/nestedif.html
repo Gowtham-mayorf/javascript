@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    City :
+    <select name="city" id="city">
+        <option value="">Select City</option>
+        <option value="MELUR">MELUR</option>
+        <option value="madurai">Madurai</option>
+        <option value="chennai">Chennai</option>
+        <option value="trichy">Trichy</option>
+
+    </select>
+   Area : 
+   <select name="area" id="area">
+        <option value="">Select Area</option>
+        <option value="bank_road">Bank Road</option>
+        <option value="alagarkovil_road">Alagarkovil Road</option>
+        <option value="milgate">Milgate</option>
+        <option value="ss_nagar">SS Nagar</option>
+
+    </select>
+   <input type="submit" name="offer" onclick="cont()" value="Offer">
+<script>
+		function cont()
+		{
+			var city = document.getElementById("city").value; 
+			var area = document.getElementById("area").value;//10
+
+			//Else If 
+			var text = city;
+
+			var result = text.toLowerCase();//melur  == value  === datatype
+    //    document.write(result);
+	// 		exit();
+			if(result == 'melur') 
+			{
+				if(area == 'bank_road'){
+					alert('Get 50% offer '+city+' '+area);
+				}
+				else if(area == 'alagarkovil_road'){
+					alert('Get 30% offer '+city+' '+area);
+				}
+				else{
+					alert('Get 10% offer '+city+' '+area);
+				}
+			}
+
+
+			else if(city == 'madurai'){
+				alert('Get 30% offer'+city);
+			}
+
+			else if(city == 'chennai'){
+				alert('Get 20% Offer'+city);
+			}
+			else{
+				alert('No offer in your city '+city);
+			}
+
+			//console.log(city)
+		}
+
+</script>
+</body>
+</html>

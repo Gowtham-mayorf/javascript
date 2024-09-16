@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+</head>
+<body>
+    <div id="changed">Js Event</div>
+    <div class="hello">hello</div>
+    <script>
+        // let click = document.querySelector('.hello');
+        // click.addEventListener('click', function(){
+
+            
+        // document.getElementById('changed').innerHTML = "clicked by person1";
+        
+
+        
+        //     console.log("clicked by person1");
+        //  })
+    
+        var callin = document.querySelector('.hello');
+        callin.addEventListener('click', () => {
+            alert("clicked by person2");
+        })
+    </script>
+</body>
+</html>

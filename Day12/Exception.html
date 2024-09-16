@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <script>
+        try{
+           const ans = sum("jkj",5);
+           console.log(ans);
+        }catch(error){
+            console.log(error);            
+        }
+        finally{
+            console.log("bye");            
+        }
+        function sum(a, b){
+            if(a != 0)
+            return a + b;
+            else
+            throw new Error("a cannot be zero");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+
+<script>
+function calc()
+{
+	m1 = get("t1");
+	m2 = get("t2");
+	m3 = get("t3");
+	m4 = get("t4");
+	m5 = get("t5");
+	
+	tot = m1+m2+m3+m4+m5;//100 =x1
+	
+	avg = parseInt(tot/5);//50 =x2
+	res = get_res(m1,m2,m3,m4,m5);//10,10,10,10,10,10 = x3
+	grd = get_grd(res, avg); //10,10,10,10,10,10 ,50 =x4
+
+	set("x1",tot);
+	set("x2",avg); 
+	set("x3",res);
+	set("x4",grd);
+}
+// Helper functions to get and set element values
+function get(id) {
+            return parseInt(document.getElementById(id).value);
+        }
+        
+        function set(id, value) {
+            document.getElementById(id).value = value;
+        }
+
+
+
+
+
+function get_res(s1, s2, s3, s4, s5) //get_res)(m1,m2,m3,m4,m5)
+{
+	if((s1>=35) && (s2>=35) && (s3>=35) && (s4>=35) && (s5>=35))
+		return "Pass";
+	else
+		return "Fail";
+}
+
+
+
+
+function get_grd(res, avg) //get_grd(pass or fail, 45)
+{
+	if(res == "Fail")
+		grade = "Nil";
+	else if(res == "Pass")
+	{
+		if(avg >= 75)
+			grade = "Distinction";
+		else if(avg >= 60)
+			grade = "First Class";
+		else if(avg >= 50)
+			grade = "Second Class";
+		else	
+			grade = "Nil";
+	}
+	
+	return grade;
+}
+
+</script>
+</head>
+<body>
+<pre>
+
+	Tamil 	= <input id=t1>
+	English = <input id=t2>
+	Maths 	= <input id=t3>
+	Science = <input id=t4>
+	Social 	= <input id=t5>
+	<input type=button value="Calculate" onclick="calc()">
+	Total 	= <input id=x1>
+	Average	= <input id=x2>
+	Result	= <input id=x3>
+	Grade	= <input id=x4>
+</pre>
+</body>
+</html>

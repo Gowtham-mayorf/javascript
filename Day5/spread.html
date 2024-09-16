@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const fruits = ['apple', 'banana', 'orange'];
+        const vegetables = ['carrot', 'broccoli'];
+
+        const combined = [...fruits, ...vegetables];
+
+        console.log(combined); // Output: ['apple', 'banana', 'orange', 'carrot', 'broccoli']
+       
+        // Copying an Array
+        const original = [1, 2, 3];
+        const copy = [...original];
+
+        console.log(copy); // Output: [1, 2, 3]
+       
+       
+        // Adding Items to an Array
+        const numbers = [1, 2, 3];
+        const newNumbers = [0, ...numbers, 4, 5];
+
+        console.log(newNumbers); // Output: [0, 1, 2, 3, 4, 5]
+
+        // Using Spread Operator in Function Calls
+
+        const nums = [1, 2, 3];
+
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const result = sum(...nums);
+
+console.log(result); // Output: 6
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

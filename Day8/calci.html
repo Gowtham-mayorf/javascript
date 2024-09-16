@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .button td {
+            padding: 5px;
+        }
+        .btn {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+        .input input {
+            width: 170px;
+            height: 40px;
+            font-size: 18px;
+            text-align: right;
+        }
+        table {
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="input">
+            <input type="text" placeholder="0" id="display" readonly>
+        </div>
+        <div class="button">
+            <table>
+                <tr class="row_1">
+                    <td><button class="btn" onclick="myfun('7')">7</button></td>
+                    <td><button class="btn" onclick="myfun('8')">8</button></td>
+                    <td><button class="btn" onclick="myfun('9')">9</button></td>
+                    <td><button class="btn" onclick="myfun('-')">-</button></td>
+                </tr>
+                <tr class="row_2">
+                    <td><button class="btn" onclick="myfun('4')">4</button></td>
+                    <td><button class="btn" onclick="myfun('5')">5</button></td>
+                    <td><button class="btn" onclick="myfun('6')">6</button></td>
+                    <td><button class="btn" onclick="myfun('+')">+</button></td>
+                </tr>
+                <tr class="row_3">
+                    <td><button class="btn" onclick="myfun('1')">1</button></td>
+                    <td><button class="btn" onclick="myfun('2')">2</button></td>
+                    <td><button class="btn" onclick="myfun('3')">3</button></td>
+                    <td><button class="btn" onclick="myfun('*')">*</button></td>
+                </tr>
+                <tr class="row_4">
+                    <td colspan="2"><button class="btn" onclick="solve()">=</button></td>
+                    <td><button class="btn" onclick="myfun('0')">0</button></td>
+                    <td><button class="btn" onclick="clearDisplay()">C</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function myfun(val) {
+            document.getElementById('display').value += val;
+        }
+
+        function solve() {
+            let x = document.getElementById('display').value;
+            let y = eval(x);
+            document.getElementById('display').value = y;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = "";
+        }
+    </script>
+</body>
+</html>

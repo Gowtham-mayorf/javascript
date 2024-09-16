@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <script>
+        function myf()
+        {
+            var a = prompt("Enter First Number: ","0");
+            document.getElementById("t1").value = a;
+            var b = prompt("Enter Second Number: ","0");
+            document.getElementById("t2").value = b;	
+            total =parseInt(a)+parseInt(b);
+            document.getElementById("t3").value = total;
+        }
+        </script>
+</head>
+<body>
+    <input type=button onclick="myf()" value="Sum of 2 Nos">
+     <input id=t1> + <input id=t2> = <input id=t3>
+</body>
+</html>

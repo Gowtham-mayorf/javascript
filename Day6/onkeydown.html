@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeydown Example</title>
+</head>
+<body>
+    <h1>Press any key and check the console!</h1>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            console.log('Key pressed:', event.key); // Logs the name of the key pressed
+            console.log('Key code:', event.keyCode); // Logs the key code of the key pressed (deprecated but still supported)
+        });
+    </script>
+</body>
+</html>

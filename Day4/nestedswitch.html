@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getFruit(number, season) {
+            //           1        summer
+    let fruit ;
+    let seasonInfo;
+
+    // Outer switch statement to determine the fruit
+    switch (number) {
+        case 1:
+            fruit = 'Apple';
+            break;
+        case 2:
+            fruit = 'Banana';
+            break;
+        case 3:
+            fruit = 'Cherry';
+            break;
+        default:
+            fruit = 'Unknown fruit';
+            break;
+    }
+
+    // Inner switch statement to determine the season information
+    switch (season) {
+        case 'summer':
+            seasonInfo = 'Great for making fruit salads!';
+            break;
+        case 'winter':
+            seasonInfo = 'Perfect for making warm pies!';
+            break;
+        case 'spring':
+            seasonInfo = 'Fresh and vibrant!';
+            break;
+        case 'fall':
+            seasonInfo = 'Ideal for harvest festivals!';
+            break;
+        default:
+            seasonInfo = 'Season information not available.';
+            break;
+    }
+
+    return `Fruit: ${fruit}. ${seasonInfo}`;
+}
+
+// Test the function with different numbers and seasons
+console.log(getFruit(1, 'summer')); // Output: Fruit: Apple. Great for making fruit salads!
+console.log(getFruit(2, 'winter')); // Output: Fruit: Banana. Perfect for making warm pies!
+console.log(getFruit(3, 'fall'));   // Output: Fruit: Cherry. Ideal for harvest festivals!
+console.log(getFruit(4, 'spring')); // Output: Fruit: Unknown fruit. Fresh and vibrant!
+console.log(getFruit(1, 'unknown')); // Output: Fruit: Apple. Season information not available.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  A :  <input type=text id=t1>  B:  <input type=text id=t2> 
+<br><br>
+Ans:   <input type=text id =t3> <br><br>
+	<input type=button Value="Add" onclick="myfun('add')">
+	<input type=button Value="Sub" onclick="myfun('sub')">
+	<input type=button Value="Mul" onclick="myfun('mul')">
+	<input type=button Value="Div" onclick="myfun('div')">
+	<input type=button Value="Mod" onclick="myfun('mod')">
+	<script>
+		function myfun(val)
+		{
+			var a = parseInt(document.getElementById("t1").value);
+			var b = parseInt(document.getElementById("t2").value);
+			var res;
+			{
+			if (val == "add")
+				res = a + b;
+			else if (val == "sub")
+				res = a - b;
+			else if (val == "mul")
+				res = a * b;
+			else if (val == "div")
+				res = a / b;
+			else if (val == "mod")
+				res = a % b;
+			}
+			document.getElementById("t3").value = res;			
+		}
+
+	</script>
+</body>
+</html>

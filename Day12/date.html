@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+function dw(x)
+{
+	document.write(x);
+	document.write("<br>");
+}
+
+var d = new Date();
+dw(d);
+
+dw("Date : "+d.getDate());
+dw("Month : "+d.getMonth());
+dw("Year : "+d.getFullYear());
+dw("Hours : "+d.getHours());
+dw("Minutes : "+d.getMinutes());
+dw("Seconds : "+d.getSeconds());
+dw("Date String : "+d.toDateString());
+dw("Time String : "+d.toTimeString());
+</script>
+</body>
+</html>
